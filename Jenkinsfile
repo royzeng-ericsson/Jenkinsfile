@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'Alpine'
       args 'hostname -f'
+      image 'alpine'
     }
 
   }
