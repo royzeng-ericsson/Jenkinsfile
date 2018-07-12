@@ -1,9 +1,10 @@
 pipeline {
   agent {
-    node {
-      label 'RSlave'
+    docker {
+      image 'Alpine'
+      args 'hostname -f'
     }
-    
+
   }
   stages {
     stage('Hostname') {
